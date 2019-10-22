@@ -80,18 +80,20 @@ class StoreListPage extends React.Component {
 
 
   handleAction = action => {
-    if (action === this.state.action) {
+    if (action === this.state.action ||
+      action === STATS.refreshing && this.state.action === STATS.loading ||
+      action === STATS.loading && this.state.action === STATS.refreshing) {
       return false;
     }
     if (action === STATS.refreshing) {
       this.refreshPageData();
     } else if (action === STATS.loading) {
       this.handLoadMore();
-    } else {
-      this.setState({
-        action: action
-      });
-    }
+    } 
+
+    this.setState({
+      action: action
+    })
   };
 
 
