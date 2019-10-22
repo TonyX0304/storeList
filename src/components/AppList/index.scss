@@ -1,0 +1,55 @@
+.appList-container {
+  .list {
+    margin-left: 30px;
+    font-size: 32px;
+    color: #000;
+    padding-left: 0;
+
+    .list-item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 30px;
+      padding-left: 0;
+
+      &:nth-child(even) {
+        .app-icon {
+          border-radius: 50%;
+        }
+      }
+
+      &:nth-child(odd) {
+        .app-icon {
+          border-radius: 20px;
+        }
+      }
+
+      .app-index {
+        font-size: 40px;
+        color: #666;
+        font-weight: 300;
+        width: 70px;
+      }
+
+      .app-img {
+        width: 100px;
+
+        .app-icon {
+          width: 100%;
+        }
+      }
+
+      .app-info {
+        flex: 1;
+        margin-left: 25px;
+        text-align: left;
+
+        .app-type {
+          font-size: 28px;
+          margin-top: 10px;
+          color: #666;
+        }
+      }
+    }
+  }
+}
